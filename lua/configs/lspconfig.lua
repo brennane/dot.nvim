@@ -11,12 +11,13 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
     on_init = on_init,
+    hover = true,
     capabilities = capabilities,
   }
 end
 
 -- typescript
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
@@ -40,4 +41,10 @@ lspconfig.rust_analyzer.setup({
             },
         },
     },
+})
+
+lspconfig.pyright.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filestypes = {"python"},
 })
