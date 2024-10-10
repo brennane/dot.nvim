@@ -1,0 +1,6 @@
+-- vim.api.nvim_create_autocmd("BufReadPost", {
+--  pattern = "*",
+--  callback = function()
+--    vim.cmd("packadd CopilotChat.nvim")
+--  end,
+-- })
